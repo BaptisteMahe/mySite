@@ -9,13 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TitleComponent } from './title/title.component';
 import { SectionContainerComponent } from './section-container/section-container.component';
 import { SectionComponent } from './section/section.component';
+import { FooterComponent } from './footer/footer.component';
+import { LinkContainerComponent } from './link-container/link-container.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     SectionContainerComponent,
-    SectionComponent
+    SectionComponent,
+    FooterComponent,
+    LinkContainerComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SectionComponent implements OnInit {
 
   @Input()
+  label: string;
+
+  @Input()
   imageSource: string;
 
   @Input()
