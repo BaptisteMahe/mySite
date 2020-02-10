@@ -1,4 +1,11 @@
-<div>
-  <img [src]="this.imageSource"/>
-  <p>{{this.textContent}}</p>
-<div>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+        {{this.label}}
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-panel-description>
+    <img [src]="this.imageSource"/>
+    <p>{{this.textContent}}</p>
+  </mat-panel-description>
+</mat-expansion-panel>

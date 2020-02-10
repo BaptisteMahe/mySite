@@ -1,8 +1,6 @@
-<mat-tab-group>
-  <mat-tab *ngFor="let sectionContent of this.sectionContentArray;" [label]="sectionContent.label">
-    <app-section
-      [imageSource]="sectionContent.imageUrl"
-      [textContent]="sectionContent.paragraph"></app-section>
-    <mat-divider></mat-divider>
-  </mat-tab>
-</mat-tab-group>
+<div *ngFor="let sectionContent of this.sectionContentArray;">
+  <app-section
+    [label]="sectionContent.label"
+    [imageSource]="sectionContent.imageUrl"
+    [textContent]="sectionContent.paragraph"></app-section>
+</div>
