@@ -1,6 +1,8 @@
 <mat-toolbar color="secondary">
-  <app-link-container>
-  </app-link-container>
+  <app-link
+  *ngFor="let linkProperties of this.linkPropertiesArray;"
+  [linkProperties]="linkProperties">
+  </app-link>
   <app-contact>
   </app-contact>
 </mat-toolbar>

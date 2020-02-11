@@ -10,10 +10,10 @@ import { TitleComponent } from './components/title/title.component';
 import { SectionContainerComponent } from './components/section-container/section-container.component';
 import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LinkContainerComponent } from './components/link-container/link-container.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { LinkComponent } from './components/link/link.component';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,10 @@ import { CommentComponent } from './components/comment/comment.component';
     SectionContainerComponent,
     SectionComponent,
     FooterComponent,
-    LinkContainerComponent,
     ContactComponent,
     IntroComponent,
-    CommentComponent
+    CommentComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,

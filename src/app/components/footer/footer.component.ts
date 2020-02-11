@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LinkProperties } from '../../interfaces/link-properties';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  linkPropertiesArray: LinkProperties[] = [];
+
+  constructor(private contentService: ContentService) { }
 
   ngOnInit() {
+    this.linkPropertiesArray = this.contentService.getLinksProperties();
   }
 
 }

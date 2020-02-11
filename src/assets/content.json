@@ -39,5 +39,18 @@
     }, {
       "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
+  }],
+  "links": [{
+    "label": "github",
+    "imageUrl":"../../assets/github.png",
+    "address":"https://github.com/BaptisteMahe"
+  }, {
+    "label": "linkedin",
+    "imageUrl":"../../assets/linkedin.png",
+    "address":"https://www.linkedin.com/in/baptiste-mah%C3%A9-95b425180/"
+  }, {
+    "label": "pdfResume",
+    "imageUrl":"../../assets/download.png",
+    "address":"../../assets/resume.pdf"
   }]
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionProperties } from '../../interfaces/section-properties';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-section-container',
@@ -8,16 +9,12 @@ import { SectionProperties } from '../../interfaces/section-properties';
 })
 export class SectionContainerComponent implements OnInit {
 
-  // tslint:disable-next-line: max-line-length
-  sectionContentArray: SectionProperties[] = [];
+  sectionPropertiesArray: SectionProperties[] = [];
 
-  constructor() { }
+  constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    const sectionsContentFromJson = require('../../../assets/content.json').sections;
-    sectionsContentFromJson.forEach(element => {
-      this.sectionContentArray.push(element);
-    });
+    this.sectionPropertiesArray = this.contentService.getSectionsProperties();
   }
 
 }

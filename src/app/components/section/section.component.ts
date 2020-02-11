@@ -8,12 +8,12 @@ import { SectionProperties } from '../../interfaces/section-properties';
 })
 export class SectionComponent implements OnInit {
 
-
   @Input()
   sectionProperties: SectionProperties;
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
 }
