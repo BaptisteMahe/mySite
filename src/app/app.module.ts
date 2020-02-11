@@ -1,19 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './modules/material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TitleComponent } from './title/title.component';
-import { SectionContainerComponent } from './section-container/section-container.component';
-import { SectionComponent } from './section/section.component';
-import { FooterComponent } from './footer/footer.component';
-import { LinkContainerComponent } from './link-container/link-container.component';
-import { ContactComponent } from './contact/contact.component';
-import { IntroComponent } from './intro/intro.component';
-import { CommentComponent } from './comment/comment.component';
+import { TitleComponent } from './components/title/title.component';
+import { SectionContainerComponent } from './components/section-container/section-container.component';
+import { SectionComponent } from './components/section/section.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LinkContainerComponent } from './components/link-container/link-container.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { IntroComponent } from './components/intro/intro.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 @NgModule({
   declarations: [
