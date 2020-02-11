@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LinkContainerComponent } from './link-container/link-container.component';
 import { ContactComponent } from './contact/contact.component';
 import { IntroComponent } from './intro/intro.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { IntroComponent } from './intro/intro.component';
     FooterComponent,
     LinkContainerComponent,
     ContactComponent,
-    IntroComponent
+    IntroComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
