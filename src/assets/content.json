@@ -1,0 +1,43 @@
+{
+  "sections": [{
+    "label": "Introduction to the site",
+    "imageUrl": "../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  } , {
+    "label": "Label1",
+    "imageUrl": "../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  }, {
+    "label": "Label2",
+    "imageUrl": "../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  }, {
+    "label": "Label3",
+    "imageUrl": "../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  }, {
+    "label": "Label4",
+    "imageUrl": "../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  }]
+}

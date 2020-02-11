@@ -1,6 +1,4 @@
-<div *ngFor="let sectionContent of this.sectionContentArray;">
-  <app-section
-    [label]="sectionContent.label"
-    [imageSource]="sectionContent.imageUrl"
-    [textContent]="sectionContent.paragraph"></app-section>
-</div>
+<app-section
+  *ngFor="let sectionContent of this.sectionContentArray;"
+  [sectionProperties]="sectionContent">
+</app-section>
