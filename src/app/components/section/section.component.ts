@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SectionProperties } from '../../interfaces/section-properties';
 
 @Component({
   selector: 'app-section',
@@ -7,18 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SectionComponent implements OnInit {
 
-  @Input()
-  label: string;
 
   @Input()
-  imageSource: string;
-
-  @Input()
-  textContent: string;
+  sectionProperties: SectionProperties;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }
