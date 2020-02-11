@@ -12,6 +12,7 @@ import { SectionComponent } from './section/section.component';
 import { FooterComponent } from './footer/footer.component';
 import { LinkContainerComponent } from './link-container/link-container.component';
 import { ContactComponent } from './contact/contact.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContactComponent } from './contact/contact.component';
     SectionComponent,
     FooterComponent,
     LinkContainerComponent,
-    ContactComponent
+    ContactComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule,
