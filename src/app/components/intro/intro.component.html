@@ -1,1 +1,6 @@
-<p>intro works!</p>
+<div>
+  <h2>{{this.introProperties.label}}</h2>
+  <img [src]="this.introProperties.imageUrl"/>
+<p *ngFor="let content of this.introProperties.content">{{content.paragraph}}</p>
+</div>
+
