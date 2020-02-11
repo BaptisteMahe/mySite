@@ -1,6 +1,6 @@
 {
   "sections": [{
-    "label": "Introduction to the site",
+    "label": "Label0",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
       "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
@@ -52,5 +52,14 @@
     "label": "pdfResume",
     "imageUrl":"../../assets/download.png",
     "address":"../../assets/resume.pdf"
-  }]
+  }],
+  "intro": {
+    "label":"INTRODUCTION",
+    "imageUrl":"../../assets/img-example.png",
+    "content": [{
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }, {
+      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+    }]
+  }
 }
