@@ -1,8 +1,37 @@
 .comment-form {
-  margin: 1%;
-  padding: 1%;
-  border-style: solid;
-  border-color: black;
-  border-radius: 1em;
-  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+h3 {
+  text-shadow: 2px 2px 5px #000000;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+mat-label {
+  color: white
+}
+
+input {
+  caret-color:white;
+}
+
+textarea {
+  height: 80px;
+  background-color: 000000;
+  border-radius: 5px 5px 5px 5px;
+  border-style: double;
+  margin-top: 2px !important;
+  padding: 5px !important;
+  caret-color:white;
+
+  .content-invalid {
+    background-color: red;
+  }
 }
