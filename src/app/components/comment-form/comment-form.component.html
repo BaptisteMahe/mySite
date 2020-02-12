@@ -1,6 +1,7 @@
 <div class="comment-form">
   <header>
     <h3>Add a comment !</h3>
+    <mat-divider style="margin-bottom:5px;"></mat-divider>
   </header>
   <form
     [formGroup]="this.form"
@@ -40,6 +41,7 @@
     <mat-form-field>
       <label for="content">Your comment</label>
       <textarea
+        [class.content-invalid]="this.form.get('content').hasError()"
         matInput
         type="text"
         name="content"

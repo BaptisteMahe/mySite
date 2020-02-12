@@ -2,10 +2,37 @@ p {
   margin: 0px;
 }
 
+h {
+  &3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 3px 5px #000000;
+  }
+
+  &4 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+.comment-subtitle {
+  font-weight: bold;
+  font-size: 20px;
+
+  .comment-email {
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 18px;
+  }
+
+  .comment-date {
+    font-weight: normal;
+    font-size: 14px;
+  }
+}
+
 .comment {
   margin: 1%;
   padding: 1%;
-  border-style: solid;
-  border-color: black;
-  border-radius: 1em;
 }
