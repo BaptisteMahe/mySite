@@ -9,12 +9,12 @@ import { ContentService } from '../../services/content.service';
 })
 export class CommentContainerComponent implements OnInit {
 
-  commentPropertiesArray: CommentProperties[] = [];
+  propertiesArray: CommentProperties[] = [];
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.commentPropertiesArray = this.contentService.getCommentsProperties();
+    this.propertiesArray = this.contentService.getCommentsProperties();
   }
 
 }

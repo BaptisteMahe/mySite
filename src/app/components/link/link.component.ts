@@ -9,7 +9,7 @@ import { LinkProperties } from '../../interfaces/link-properties';
 export class LinkComponent implements OnInit {
 
   @Input()
-  linkProperties: LinkProperties;
+  properties: LinkProperties;
 
   constructor() { }
 

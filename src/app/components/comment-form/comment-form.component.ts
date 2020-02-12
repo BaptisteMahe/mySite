@@ -10,13 +10,13 @@ import { ContentService } from '../../services/content.service';
 })
 export class CommentFormComponent implements OnInit {
 
-  commentForm: FormGroup;
+  form: FormGroup;
   nameRegEx = '[\\w\\-\\s\\/]+';
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.commentForm = new FormGroup({
+    this.form = new FormGroup({
       authorName: new FormControl(null,
         Validators.compose([
           Validators.required,
@@ -38,18 +38,18 @@ export class CommentFormComponent implements OnInit {
     });
   }
 
-  enrich(commentProperties: CommentProperties): CommentProperties {
-    const enrichedCommentProperties = commentProperties;
+  enrich(properties: CommentProperties): CommentProperties {
+    const enrichedProperties = properties;
 
-    enrichedCommentProperties.id = this.contentService.getNewCommentId();
-    enrichedCommentProperties.date = new Date().toDateString();
+    enrichedProperties.id = this.contentService.getNewCommentId();
+    enrichedProperties.date = new Date().toDateString();
 
-    return enrichedCommentProperties;
+    return enrichedProperties;
   }
 
-  onSubmit(inputtedCommentProperties: CommentProperties): void {
-    const enrichedCommentProperties = this.enrich(inputtedCommentProperties);
-    this.contentService.updateComments(enrichedCommentProperties);
+  onSubmit(inputtedProperties: CommentProperties): void {
+    const enrichedProperties = this.enrich(inputtedProperties);
+    this.contentService.addCommentProperties(enrichedProperties);
   }
 
 }

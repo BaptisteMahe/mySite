@@ -1,11 +1,11 @@
 <mat-expansion-panel>
   <mat-expansion-panel-header>
     <mat-panel-title>
-        {{ this.sectionProperties.label }}
+        {{ this.properties.label }}
     </mat-panel-title>
   </mat-expansion-panel-header>
   <mat-panel-description>
-    <img [src]="this.sectionProperties.imageUrl"/>
-    <p *ngFor="let content of this.sectionProperties.content">{{ content.paragraph }}</p>
+    <img [src]="this.properties.imageUrl"/>
+    <p *ngFor="let content of this.properties.content">{{ content.paragraph }}</p>
   </mat-panel-description>
 </mat-expansion-panel>

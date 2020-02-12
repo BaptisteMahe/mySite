@@ -9,7 +9,7 @@ import { CommentProperties } from '../../interfaces/comment-properties';
 export class CommentComponent implements OnInit {
 
   @Input()
-  commentProperties: CommentProperties;
+  properties: CommentProperties;
 
   constructor() { }
 
@@ -17,6 +17,6 @@ export class CommentComponent implements OnInit {
   }
 
   isEmailDisplayed() {
-    return this.commentProperties.email && this.commentProperties.isEmailPublic;
+    return this.properties.email && this.properties.isEmailPublic;
   }
 }

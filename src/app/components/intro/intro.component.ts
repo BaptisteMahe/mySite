@@ -9,12 +9,12 @@ import { ContentService } from '../../services/content.service';
 })
 export class IntroComponent implements OnInit {
 
-  introProperties: IntroProperties;
+  properties: IntroProperties;
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.introProperties = this.contentService.getIntroProperties();
+    this.properties = this.contentService.getIntroProperties();
   }
 
 }

@@ -9,12 +9,12 @@ import { ContentService } from '../../services/content.service';
 })
 export class SectionContainerComponent implements OnInit {
 
-  sectionPropertiesArray: SectionProperties[] = [];
+  propertiesArray: SectionProperties[] = [];
 
   constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.sectionPropertiesArray = this.contentService.getSectionsProperties();
+    this.propertiesArray = this.contentService.getSectionsProperties();
   }
 
 }

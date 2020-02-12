@@ -33,11 +33,18 @@ export class ContentService {
 
   // ONLY FOR NOW
   getNewCommentId(): number {
-    return -1;
+    return this.content.comments.length;
   }
 
   // ONLY FOR NOW
-  updateComments(commentProperties: CommentProperties): void {
-    console.log(commentProperties);
+  addCommentProperties(commentProperties: CommentProperties): void {
+    this.content.comments.push(commentProperties);
+  }
+
+  deleteCommentProperties(commentProperties: CommentProperties): void {
+    const index = this.content.comments.indexOf(commentProperties);
+    if (index >= 0) {
+      this.content.comments.splice(index, 1);
+    }
   }
 }

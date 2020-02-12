@@ -9,7 +9,7 @@ import { SectionProperties } from '../../interfaces/section-properties';
 export class SectionComponent implements OnInit {
 
   @Input()
-  sectionProperties: SectionProperties;
+  properties: SectionProperties;
 
   constructor() { }
 

@@ -3,8 +3,8 @@
     <h3>Add a comment !</h3>
   </header>
   <form
-    [formGroup]="this.commentForm"
-    (ngSubmit)="this.onSubmit(commentForm.value)">
+    [formGroup]="this.form"
+    (ngSubmit)="this.onSubmit(form.value)">
 
     <mat-form-field>
       <mat-label for="authorName">Your name</mat-label>
@@ -46,6 +46,6 @@
         formControlName="content"></textarea>
     </mat-form-field>
     <br>
-    <button mat-raised-button type="submit" [disabled]="!commentForm.valid">Send comment</button>
+    <button mat-raised-button type="submit" [disabled]="!form.valid">Send comment</button>
   </form>
 </div>
