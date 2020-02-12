@@ -5,42 +5,47 @@
   <form
     [formGroup]="this.commentForm"
     (ngSubmit)="this.onSubmit(commentForm.value)">
-    <ul>
-      <li>
-        <label for="authorName">Your name</label>
-        <input
-          type="text"
-          name="authorName"
-          formControlName="authorName"/>
-      </li>
-      <li>
-        <label for="email">Your email (optional)</label>
-        <input
-          type="text"
-          name="email"
-          formControlName="email"/>
-        <br/>
-        <label for="isEmailPublic">Can I display it ?</label>
-        <input
-          type="checkbox"
-          name="isEmailPublic"
-          formControlName="isEmailPublic"/>
-      </li>
-      <li>
-        <label for="label">Your comment's title</label>
-        <input
-          type="text"
-          name="label"
-          formControlName="label"/>
-      </li>
-      <li>
-        <label for="content">Your comment</label>
-        <input
-          type="text"
-          name="content"
-          formControlName="content"/>
-      </li>
-    </ul>
-    <button type="submit" [disabled]="!commentForm.valid">Send comment</button>
+
+    <mat-form-field>
+      <mat-label for="authorName">Your name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="authorName"
+        formControlName="authorName"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <mat-label>Your email</mat-label>
+      <input
+        matInput
+        type="text"
+        name="email"
+        formControlName="email"/>
+    </mat-form-field>
+    <mat-checkbox
+      matInput
+      name="isEmailPublic"
+      formControlName="isEmailPublic">I agree displaying this email on this website</mat-checkbox>
+    <br>
+    <mat-form-field>
+      <mat-label for="label">Your comment's title</mat-label>
+      <input
+        matInput
+        type="text"
+        name="label"
+        formControlName="label"/>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <label for="content">Your comment</label>
+      <textarea
+        matInput
+        type="text"
+        name="content"
+        formControlName="content"></textarea>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit" [disabled]="!commentForm.valid">Send comment</button>
   </form>
 </div>

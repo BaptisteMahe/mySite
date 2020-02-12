@@ -31,11 +31,12 @@ export class ContentService {
     return this.content.comments;
   }
 
+  // ONLY FOR NOW
   getNewCommentId(): number {
     return -1;
   }
 
-  // ONLY FRO NOW
+  // ONLY FOR NOW
   updateComments(commentProperties: CommentProperties): void {
     console.log(commentProperties);
   }
