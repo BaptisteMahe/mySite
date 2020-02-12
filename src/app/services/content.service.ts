@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { SectionProperties } from '../interfaces/section-properties';
 import { LinkProperties } from '../interfaces/link-properties';
 import { IntroProperties } from '../interfaces/intro-properties';
+import { CommentProperties } from '../interfaces/comment-properties';
+
 import contentJSON from '../../assets/content.json';
 
 @Injectable({
@@ -23,5 +25,18 @@ export class ContentService {
 
   getIntroProperties(): IntroProperties {
     return this.content.intro;
+  }
+
+  getCommentsProperties(): CommentProperties[] {
+    return this.content.comments;
+  }
+
+  getNewCommentId(): number {
+    return -1;
+  }
+
+  // ONLY FRO NOW
+  updateComments(commentProperties: CommentProperties): void {
+    console.log(commentProperties);
   }
 }

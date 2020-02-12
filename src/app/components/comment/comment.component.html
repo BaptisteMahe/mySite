@@ -1,1 +1,8 @@
-<p>comment works!</p>
+<div class="comment">
+  <h3> {{ this.commentProperties.label }}</h3>
+  <h4> FROM : {{ this.commentProperties.authorName }}</h4>
+  <span> {{ this.commentProperties.date | date }}</span>
+  <br/>
+  <span *ngIf="this.isEmailDisplayed()">{{ this.commentProperties.email }}</span>
+  <p>{{ this.commentProperties.content }}</p>
+</div>
