@@ -1,0 +1,46 @@
+<div class="comment-form">
+  <header>
+    <h3>Add a comment !</h3>
+  </header>
+  <form
+    [formGroup]="this.commentForm"
+    (ngSubmit)="this.onSubmit(commentForm.value)">
+    <ul>
+      <li>
+        <label for="authorName">Your name</label>
+        <input
+          type="text"
+          name="authorName"
+          formControlName="authorName"/>
+      </li>
+      <li>
+        <label for="email">Your email (optional)</label>
+        <input
+          type="text"
+          name="email"
+          formControlName="email"/>
+        <br/>
+        <label for="isEmailPublic">Can I display it ?</label>
+        <input
+          type="checkbox"
+          name="isEmailPublic"
+          formControlName="isEmailPublic"/>
+      </li>
+      <li>
+        <label for="label">Your comment's title</label>
+        <input
+          type="text"
+          name="label"
+          formControlName="label"/>
+      </li>
+      <li>
+        <label for="content">Your comment</label>
+        <input
+          type="text"
+          name="content"
+          formControlName="content"/>
+      </li>
+    </ul>
+    <button type="submit" [disabled]="!commentForm.valid">Send comment</button>
+  </form>
+</div>

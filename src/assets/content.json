@@ -3,63 +3,86 @@
     "label": "Label0",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
   } , {
     "label": "Label1",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
   }, {
     "label": "Label2",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
   }, {
     "label": "Label3",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
   }, {
     "label": "Label4",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
   }],
   "links": [{
     "label": "github",
-    "imageUrl":"../../assets/github.png",
-    "address":"https://github.com/BaptisteMahe"
+    "imageUrl": "../../assets/github.png",
+    "address": "https://github.com/BaptisteMahe"
   }, {
     "label": "linkedin",
-    "imageUrl":"../../assets/linkedin.png",
-    "address":"https://www.linkedin.com/in/baptiste-mah%C3%A9-95b425180/"
+    "imageUrl": "../../assets/linkedin.png",
+    "address": "https://www.linkedin.com/in/baptiste-mah%C3%A9-95b425180/"
   }, {
     "label": "pdfResume",
-    "imageUrl":"../../assets/download.png",
-    "address":"../../assets/resume.pdf"
+    "imageUrl": "../../assets/download.png",
+    "address": "../../assets/resume.pdf"
   }],
   "intro": {
-    "label":"INTRODUCTION",
-    "imageUrl":"../../assets/img-example.png",
+    "label": "INTRODUCTION",
+    "imageUrl": "../../assets/img-example.png",
     "content": [{
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }, {
-      "paragraph":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
+      "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
     }]
-  }
+  },
+  "comments": [{
+    "id": 0,
+    "label": "Comment0",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor.",
+    "authorName":"test",
+    "date": "11 February 2020"
+  }, {
+    "id": 1,
+    "label": "Comment1",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor.",
+    "authorName":"test",
+    "date": "11 February 2020",
+    "email": "test@gmail.com",
+    "isEmailPublic": true
+  }, {
+    "id": 2,
+    "label": "Comment2",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor.",
+    "authorName":"test",
+    "date": "11 February 2020",
+    "email": "test@gmail.com",
+    "isEmailPublic":false
+  }]
 }
