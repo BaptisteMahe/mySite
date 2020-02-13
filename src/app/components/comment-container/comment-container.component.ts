@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommentProperties } from '../../interfaces/comment-properties';
-import { ContentService } from '../../services/content.service';
+import { CommentService } from '../../services/comment.service';
 
 @Component({
   selector: 'app-comment-container',
@@ -11,10 +11,10 @@ export class CommentContainerComponent implements OnInit {
 
   propertiesArray: CommentProperties[] = [];
 
-  constructor(private contentService: ContentService) { }
+  constructor(private commentService: CommentService) { }
 
   ngOnInit() {
-    this.propertiesArray = this.contentService.getCommentsProperties();
+    this.propertiesArray = this.commentService.getCommentsProperties();
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SectionProperties } from '../../interfaces/section-properties';
-import { ContentService } from '../../services/content.service';
+import { StaticContentService } from '../../services/static-content.service';
 
 @Component({
   selector: 'app-section-container',
@@ -11,10 +11,10 @@ export class SectionContainerComponent implements OnInit {
 
   propertiesArray: SectionProperties[] = [];
 
-  constructor(private contentService: ContentService) { }
+  constructor(private staticContentService: StaticContentService) { }
 
   ngOnInit() {
-    this.propertiesArray = this.contentService.getSectionsProperties();
+    this.propertiesArray = this.staticContentService.getSectionsProperties();
   }
 
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IntroProperties } from '../../interfaces/intro-properties';
-import { ContentService } from '../../services/content.service';
+import { StaticContentService } from '../../services/static-content.service';
 
 @Component({
   selector: 'app-intro',
@@ -11,10 +11,10 @@ export class IntroComponent implements OnInit {
 
   properties: IntroProperties;
 
-  constructor(private contentService: ContentService) { }
+  constructor(private staticContentService: StaticContentService) { }
 
   ngOnInit() {
-    this.properties = this.contentService.getIntroProperties();
+    this.properties = this.staticContentService.getIntroProperties();
   }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { CommentProperties } from '../../interfaces/comment-properties';
-import { ContentService } from '../../services/content.service';
+import { CommentService } from '../../services/comment.service';
 
 @Component({
   selector: 'app-comment-form',
@@ -13,7 +13,7 @@ export class CommentFormComponent implements OnInit {
   form: FormGroup;
   nameRegEx = '[\\w\\-\\s\\/]+';
 
-  constructor(private contentService: ContentService) { }
+  constructor(private commentService: CommentService) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -41,7 +41,7 @@ export class CommentFormComponent implements OnInit {
   enrich(properties: CommentProperties): CommentProperties {
     const enrichedProperties = properties;
 
-    enrichedProperties.id = this.contentService.getNewCommentId();
+    enrichedProperties.id = this.commentService.getNewCommentId();
     enrichedProperties.date = new Date().toDateString();
 
     return enrichedProperties;
@@ -49,7 +49,7 @@ export class CommentFormComponent implements OnInit {
 
   onSubmit(inputtedProperties: CommentProperties): void {
     const enrichedProperties = this.enrich(inputtedProperties);
-    this.contentService.addCommentProperties(enrichedProperties);
+    this.commentService.addCommentProperties(enrichedProperties);
   }
 
 }
