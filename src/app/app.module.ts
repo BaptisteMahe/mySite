@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TitleComponent } from './components/title/title.component';
+import { HeaderComponent } from './components/header/header.component';
 import { SectionContainerComponent } from './components/section-container/section-container.component';
 import { SectionComponent } from './components/section/section.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,7 +21,7 @@ import { CommentContainerComponent } from './components/comment-container/commen
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent,
+    HeaderComponent,
     SectionContainerComponent,
     SectionComponent,
     FooterComponent,

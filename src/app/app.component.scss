@@ -1,21 +1,20 @@
 @import '../variables.scss';
 
 .main-container {
-  margin-top: 5%;
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: $primary;
+  margin-bottom: 70px;
+  padding-top: $headerBaseSize;
+  margin-left: 8%;
+  margin-right: 8%;
+  background-color: $secondary;
   color: white;
   border-radius: 10px 10px 10px 10px;
 }
 
 .img-display {
   background-image: url("../assets/wall-paper.jpg");
-  background-color: #cccccc;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
   padding-top: 2%;
-  padding-bottom: 2%;
 }

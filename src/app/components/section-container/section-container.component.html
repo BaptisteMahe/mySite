@@ -1,4 +1,6 @@
-<app-section
-  *ngFor="let sectionProperties of this.propertiesArray;"
-  [properties]="sectionProperties">
-</app-section>
+<mat-accordion>
+  <app-section
+    *ngFor="let sectionProperties of this.propertiesArray;"
+    [properties]="sectionProperties">
+  </app-section>
+</mat-accordion>
