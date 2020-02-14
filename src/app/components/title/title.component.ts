@@ -10,15 +10,13 @@ import { throttleTime, map } from 'rxjs/operators';
 export class TitleComponent implements OnInit {
 
   scrollObs: Observable<any>;
-  initialHeight = 120;
+  initialHeight = 100;
   minHeight = 70;
   verticalPos: number;
-
 
   constructor() { }
 
   ngOnInit() {
-    // Ask about Observables and pipe of those.
     this.scrollObs = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset)
@@ -28,5 +26,4 @@ export class TitleComponent implements OnInit {
       this.verticalPos = Math.max(this.initialHeight / (verticalPos / 2 + 1), this.minHeight);
     });
   }
-
 }
