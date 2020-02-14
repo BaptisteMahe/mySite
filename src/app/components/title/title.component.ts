@@ -10,7 +10,8 @@ import { throttleTime, map } from 'rxjs/operators';
 export class TitleComponent implements OnInit {
 
   scrollObs: Observable<any>;
-  initialHeight = 100;
+  initialHeight = 120;
+  minHeight = 70;
   verticalPos: number;
 
 
@@ -24,7 +25,7 @@ export class TitleComponent implements OnInit {
     );
 
     this.scrollObs.subscribe(verticalPos => {
-      this.verticalPos = this.initialHeight / (verticalPos / 2 + 1);
+      this.verticalPos = Math.max(this.initialHeight / (verticalPos / 2 + 1), this.minHeight);
     });
   }
 
