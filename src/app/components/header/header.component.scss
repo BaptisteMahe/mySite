@@ -1,0 +1,40 @@
+@import '../../../variables.scss';
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 5px 5px 5px #000000;
+}
+
+mat-toolbar {
+  position: fixed;
+  z-index: 1;
+}
+
+.header {
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 3px 3px 10px #000000;
+  transition: 0.4s;
+  color: $text-color;
+  background-color: $primary;
+}
+
+.fill-space {
+  flex: auto;
+}
+
+.top {
+  height: $headerBaseSize;
+}
+
+.up {
+  height: 70px;
+}
+
+.down {
+  height: 0px;
+
+  h1 {
+    padding-bottom: 70px;
+  }
+}

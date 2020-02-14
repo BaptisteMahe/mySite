@@ -1,3 +1,11 @@
+@import '../../../variables.scss';
+
 p {
-  display: flex;
+  display: block;
+}
+
+.section {
+  color: $text-color !important;
+  background-color: $primary;
+  box-shadow: 0px 5px 10px black;
 }

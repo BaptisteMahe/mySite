@@ -1,9 +1,9 @@
-@import '~@angular/material/theming';
 
-$app-primary: mat-palette($mat-indigo);
-$app-accent:  mat-palette($mat-light-blue);
-$app-warn:    mat-palette($mat-pink);
+// COLOR THEME
+$primary: #9c27b0;
+$secondary: #303030;
+$text-color: #ffffff;
 
-$primary: mat-color($app-primary);
-$accent: mat-color($app-accent);
-$warn: mat-color($app-warn);
+//GENERAL SIZING
+$headerBaseSize: 120px;
+
