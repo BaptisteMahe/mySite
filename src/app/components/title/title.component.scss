@@ -2,6 +2,18 @@ h1 {
   text-align: center;
   font-size: 40px;
   text-shadow: 5px 5px 5px #000000;
+  transition: 0.2s;
+}
+
+mat-toolbar {
+  position: fixed;
+  z-index: 1;
+}
+
+.title {
+  transition: 0.5s;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 3px 3px 10px #000000;
 }
 
 .fill-space {
