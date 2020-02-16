@@ -29,12 +29,30 @@ mat-toolbar {
 
 .up {
   height: 70px;
+
+  .profile-picture {
+    height: 50px;
+  }
 }
 
 .down {
   height: 0px;
 
-  h1 {
-    padding-bottom: 70px;
+  h1{
+    margin-bottom: 70px;
   }
+  .language-button {
+    margin-bottom: 70px;
+  }
+  .profile-picture {
+    margin-bottom: 110px;
+    height: 50px;
+  }
+}
+
+.profile-picture {
+  margin-left: 50px;
+  height: 90px;
+  border-radius: 5px 5px 5px 5px;
+  border-style: solid;
 }
