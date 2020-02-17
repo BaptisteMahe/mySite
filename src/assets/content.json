@@ -41,15 +41,15 @@
     }]
   }],
   "links": [{
-    "label": "github",
+    "label": "GitHub",
     "imageUrl": "../../assets/github.png",
     "address": "https://github.com/BaptisteMahe"
   }, {
-    "label": "linkedin",
+    "label": "LinkedIn",
     "imageUrl": "../../assets/linkedin.png",
     "address": "https://www.linkedin.com/in/baptiste-mah%C3%A9-95b425180/"
   }, {
-    "label": "pdfResume",
+    "label": "Resume",
     "imageUrl": "../../assets/download.png",
     "address": "../../assets/resume.pdf"
   }],
