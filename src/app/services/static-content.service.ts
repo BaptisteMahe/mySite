@@ -28,15 +28,19 @@ export class StaticContentService {
     return this.languageObs;
   }
 
+  getHeaderProperties(language: string): any  {
+    return this.content[language].header;
+  }
+
+  getIntroProperties(language: string): IntroProperties {
+    return this.content[language].intro;
+  }
+
   getSectionsProperties(language: string): SectionProperties[] {
       return this.content[language].sections;
   }
 
   getLinksProperties(language: string): LinkProperties[] {
     return this.content[language].links;
-  }
-
-  getIntroProperties(language: string): IntroProperties {
-    return this.content[language].intro;
   }
 }
