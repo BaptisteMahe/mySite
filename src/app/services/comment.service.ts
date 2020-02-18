@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CommentProperties } from '../interfaces/comment-properties';
 
-import contentJSON from '../../assets/content.json';
+import contentJSON from '../../assets/english-content.json';
 
 @Injectable({
   providedIn: 'root'
