@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent, Observable} from 'rxjs';
-import { throttleTime, map, pairwise, distinctUntilChanged } from 'rxjs/operators';
+import { fromEvent, Observable, merge } from 'rxjs';
+import { throttleTime, map, pairwise, distinctUntilChanged, mapTo, startWith } from 'rxjs/operators';
+import { StaticContentService } from '../../services/static-content.service';
 
 @Component({
   selector: 'app-header',
@@ -9,24 +10,38 @@ import { throttleTime, map, pairwise, distinctUntilChanged } from 'rxjs/operator
 })
 export class HeaderComponent implements OnInit {
 
-  scrollObs: Observable<any>;
+  scrollObs: Observable<State>;
   state: State = State.Top;
 
-  constructor() { }
+  languageObs: Observable<string>;
+
+  constructor(private staticContentService: StaticContentService) { }
 
   ngOnInit() {
-    this.scrollObs = fromEvent(window, 'scroll').pipe(
+    this.scrollObs = this.createScrollObs();
+    this.scrollObs.subscribe(state => {
+      this.state = state;
+    });
+
+    this.languageObs = this.createLanguageObs();
+    this.staticContentService.setLanguageObs(this.languageObs);
+  }
+
+  createScrollObs(): Observable<State> {
+    const scrollObs = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),
       pairwise(),
       map(([yPosBefore, yPosAfter]): State => (this.computeState(yPosBefore, yPosAfter))),
       distinctUntilChanged()
     );
+    return scrollObs;
+  }
 
-
-    this.scrollObs.subscribe(state => {
-      this.state = state;
-    });
+  createLanguageObs(): Observable<string> {
+    const englishObs = fromEvent(document.querySelector('#englishButton'), 'click');
+    const frenchObs = fromEvent(document.querySelector('#frenchButton'), 'click');
+    return merge(englishObs.pipe(mapTo('english')), frenchObs.pipe(mapTo('french'))).pipe(startWith('english'), distinctUntilChanged());
   }
 
   computeState(yPosBefore: number, yPosAfter: number): State {

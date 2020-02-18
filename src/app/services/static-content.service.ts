@@ -3,7 +3,8 @@ import { SectionProperties } from '../interfaces/section-properties';
 import { LinkProperties } from '../interfaces/link-properties';
 import { IntroProperties } from '../interfaces/intro-properties';
 
-import contentJSON from '../../assets/content.json';
+import englishContent from '../../assets/english-content.json';
+import frenchContent from '../../assets/french-content.json';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,23 +12,31 @@ import { Observable } from 'rxjs';
 })
 export class StaticContentService {
 
-  content: any = contentJSON;
+  content: any = {
+    english: englishContent,
+    french: frenchContent
+  };
+  languageObs: Observable<string>;
 
   constructor() { }
 
-  getSectionsProperties(): SectionProperties[] {
-      return this.content.sections;
+  setLanguageObs(languageObs: Observable<string>) {
+    this.languageObs = languageObs;
   }
 
-  getLinksProperties(): LinkProperties[] {
-    return this.content.links;
+  getLanguageObs(): Observable<string> {
+    return this.languageObs;
   }
 
-  getIntroProperties(): IntroProperties {
-    return this.content.intro;
+  getSectionsProperties(language: string): SectionProperties[] {
+      return this.content[language].sections;
   }
 
-  getLanguageChangeObs(): Observable<any> {
-    return new Observable();
+  getLinksProperties(language: string): LinkProperties[] {
+    return this.content[language].links;
+  }
+
+  getIntroProperties(language: string): IntroProperties {
+    return this.content[language].intro;
   }
 }

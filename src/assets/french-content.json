@@ -54,7 +54,7 @@
     "address": "../../assets/resume.pdf"
   }],
   "intro": {
-    "label": "INTRODUCTION",
+    "label": "INTRODUCTION EN FRANÇAIS",
     "imageUrl": "../../assets/img-example.png",
     "content": [{
       "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ullamcorper ut sapien ac porttitor."
