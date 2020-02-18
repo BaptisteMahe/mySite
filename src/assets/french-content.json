@@ -1,4 +1,7 @@
 {
+  "header": {
+    "title": "Mon CV Angular"
+  },
   "sections": [{
     "label": "Label0",
     "imageUrl": "../../assets/img-example.png",

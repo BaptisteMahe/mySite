@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   scrollObs: Observable<State>;
   state: State = State.Top;
 
+  properties: any;
   languageObs: Observable<string>;
 
   constructor(private staticContentService: StaticContentService) { }
@@ -25,6 +26,9 @@ export class HeaderComponent implements OnInit {
 
     this.languageObs = this.createLanguageObs();
     this.staticContentService.setLanguageObs(this.languageObs);
+    this.languageObs.subscribe(language => {
+      this.properties = this.staticContentService.getHeaderProperties(language);
+    })
   }
 
   createScrollObs(): Observable<State> {
