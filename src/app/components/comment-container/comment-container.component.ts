@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommentProperties } from '../../interfaces/comment-properties';
 import { CommentService } from '../../services/comment.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-comment-container',
@@ -10,11 +11,15 @@ import { CommentService } from '../../services/comment.service';
 export class CommentContainerComponent implements OnInit {
 
   propertiesArray: CommentProperties[] = [];
+  commentObs: Observable<any>;
 
   constructor(private commentService: CommentService) { }
 
   ngOnInit() {
-    this.propertiesArray = this.commentService.getCommentsProperties();
+    this.commentService.getObservable('connection').subscribe((comments) => {
+      console.log('Connected to the server');
+      this.propertiesArray = comments.comments;
+    });
   }
 
 }

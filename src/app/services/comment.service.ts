@@ -1,35 +1,29 @@
 import { Injectable } from '@angular/core';
 import { CommentProperties } from '../interfaces/comment-properties';
+import { Socket } from 'ngx-socket-io';
+import { Observable } from 'rxjs';
 
-import contentJSON from '../../assets/english-content.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommentService {
 
-  content: any = contentJSON;
+  comments: CommentProperties[] = [];
+  commentObs: Observable<any>;
 
-  constructor() { }
+  constructor(private socket: Socket) { }
 
-  getCommentsProperties(): CommentProperties[] {
-    return this.content.comments;
+  getObservable(eventName: string): Observable<any> {
+    return this.socket.fromEvent<any>(eventName);
   }
 
-  // ONLY FOR NOW
+  // On the server
   getNewCommentId(): number {
-    return this.content.comments.length;
+    return this.comments.length;
   }
 
-  // ONLY FOR NOW
   addCommentProperties(commentProperties: CommentProperties): void {
-    this.content.comments.push(commentProperties);
-  }
-
-  deleteCommentProperties(commentProperties: CommentProperties): void {
-    const index = this.content.comments.indexOf(commentProperties);
-    if (index >= 0) {
-      this.content.comments.splice(index, 1);
-    }
+    this.socket.emit('newComment', commentProperties);
   }
 }
