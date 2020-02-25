@@ -11,14 +11,14 @@ import { Observable } from 'rxjs';
 export class CommentContainerComponent implements OnInit {
 
   propertiesArray: CommentProperties[] = [];
-  commentObs: Observable<any>;
+  commentObs: Observable<CommentProperties[]>;
 
   constructor(private commentService: CommentService) { }
 
   ngOnInit() {
-    this.commentService.getObservable('connection').subscribe((comments) => {
-      console.log('Connected to the server');
-      this.propertiesArray = comments.comments;
+    this.commentObs = this.commentService.getCommentObservable();
+    this.commentObs.subscribe((comments) => {
+      this.propertiesArray = comments;
     });
   }
 

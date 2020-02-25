@@ -45,7 +45,8 @@ export class HeaderComponent implements OnInit {
   createLanguageObs(): Observable<string> {
     const englishObs = fromEvent(document.querySelector('#englishButton'), 'click');
     const frenchObs = fromEvent(document.querySelector('#frenchButton'), 'click');
-    return merge(englishObs.pipe(mapTo('english')), frenchObs.pipe(mapTo('french'))).pipe(startWith('english'), distinctUntilChanged());
+    const mergedObs = merge(englishObs.pipe(mapTo('english')), frenchObs.pipe(mapTo('french')));
+    return mergedObs.pipe(startWith('english'), distinctUntilChanged());
   }
 
   computeState(yPosBefore: number, yPosAfter: number): State {
