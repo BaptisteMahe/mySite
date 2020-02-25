@@ -17,6 +17,10 @@ import { CommentComponent } from './components/comment/comment.component';
 import { LinkComponent } from './components/link/link.component';
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
 import { CommentContainerComponent } from './components/comment-container/comment-container.component';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { CommentService } from './services/comment.service';
+
+const config: SocketIoConfig = { url: 'http://localhost:5000', options: {}};
 
 @NgModule({
   declarations: [
@@ -37,9 +41,10 @@ import { CommentContainerComponent } from './components/comment-container/commen
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    SocketIoModule.forRoot(config)
   ],
-  providers: [],
+  providers: [CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

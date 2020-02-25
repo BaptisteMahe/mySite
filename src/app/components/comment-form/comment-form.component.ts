@@ -38,18 +38,17 @@ export class CommentFormComponent implements OnInit {
     });
   }
 
-  enrich(properties: CommentProperties): CommentProperties {
+  onSubmit(inputtedProperties: CommentProperties): void {
+    const propertiesWithDate = this.addDate(inputtedProperties);
+    this.commentService.sendCommentProperties(propertiesWithDate);
+  }
+
+  addDate(properties: CommentProperties): CommentProperties {
     const enrichedProperties = properties;
-
-    enrichedProperties.id = this.commentService.getNewCommentId();
     enrichedProperties.date = new Date().toDateString();
-
     return enrichedProperties;
   }
 
-  onSubmit(inputtedProperties: CommentProperties): void {
-    const enrichedProperties = this.enrich(inputtedProperties);
-    this.commentService.addCommentProperties(enrichedProperties);
-  }
+
 
 }

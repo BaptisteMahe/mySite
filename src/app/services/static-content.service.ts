@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { SectionProperties } from '../interfaces/section-properties';
 import { LinkProperties } from '../interfaces/link-properties';
 import { IntroProperties } from '../interfaces/intro-properties';
+import { Observable } from 'rxjs';
 
 import englishContent from '../../assets/english-content.json';
 import frenchContent from '../../assets/french-content.json';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
