@@ -38,8 +38,8 @@ export class CommentService {
     const connectionObs = this.createSocketObservableFrom('connection')
       .pipe(
         map(commentProperties => {
-          commentProperties.forEach(commentPorperty => {
-            this.addCommentToArray(commentPorperty);
+          commentProperties.forEach(commentProperty => {
+            this.addCommentToArray(commentProperty);
           });
           return this.commentArray;
         })
