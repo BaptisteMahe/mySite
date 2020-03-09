@@ -1,9 +1,8 @@
 export interface CommentProperties {
-  id: number;
   label: string;
   content: string;
   authorName: string;
   date: string;
+  isEmailPublic: boolean;
   email?: string;
-  isEmailPublic?: boolean;
 }
