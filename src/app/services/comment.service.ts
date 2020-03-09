@@ -27,11 +27,24 @@ export class CommentService {
   }
 
   private createCommentObs(): Observable<CommentProperties[]> {
-    const connectionObs = this.createSocketObservableFrom('connection');
+    const connectionObs = this.createConnectionObs();
     const addCommentObs = this.createAddCommentObs();
     const deleteCommentObs = this.createDeleteCommentObs();
 
     return merge(connectionObs, addCommentObs, deleteCommentObs);
+  }
+
+  private createConnectionObs(): Observable<CommentProperties[]> {
+    const connectionObs = this.createSocketObservableFrom('connection')
+      .pipe(
+        map(commentProperties => {
+          commentProperties.forEach(commentPorperty => {
+            this.addCommentToArray(commentPorperty);
+          });
+          return this.commentArray;
+        })
+      );
+    return connectionObs;
   }
 
   private createAddCommentObs(): Observable<CommentProperties[]> {
@@ -69,7 +82,7 @@ export class CommentService {
     if (commentIndex > -1) {
       this.commentArray.slice(commentIndex, 1);
     } else {
-      console.error('Wrong deleteComment query received : No such comment in commentsArray', commentProperties);
+      console.error('Wrong deleteComment query received : No such comment in commentArray', commentProperties);
     }
   }
 }

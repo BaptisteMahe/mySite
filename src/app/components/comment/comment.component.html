@@ -2,7 +2,7 @@
   <h3 class="mat-h3"> {{ this.properties.label }}</h3>
   <mat-divider></mat-divider>
   <h4 class="mat-h4 comment-subtitle">{{ this.properties.authorName }} |
-    <span *ngIf="this.isEmailDisplayed()" >
+    <span *ngIf="this.isEmailDisplayed() && this.properties.email" >
       <span class="comment-email">{{ this.properties.email }}</span>
        | </span>
     <span class="comment-date">{{ this.properties.date | date }}</span>

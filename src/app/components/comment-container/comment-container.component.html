@@ -1,7 +1,14 @@
 <div class="comment-container">
-  <app-comment
-    *ngFor="let commentProperties of this.propertiesArray;"
-    [properties]="commentProperties">
-  </app-comment>
+  <div *ngIf="this.propertiesArray.length; else emptyCommentBlock">
+    <app-comment
+      *ngFor="let commentProperties of this.propertiesArray;"
+      [properties]="commentProperties">
+    </app-comment>
+  </div>
+  <ng-template #emptyCommentBlock>
+    <h1 class="emptyComment">Be the first to add a comment !</h1>
+  </ng-template>
   <app-comment-form></app-comment-form>
 </div>
+
+

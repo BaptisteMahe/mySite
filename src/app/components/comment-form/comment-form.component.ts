@@ -41,6 +41,8 @@ export class CommentFormComponent implements OnInit {
   onSubmit(inputtedProperties: CommentProperties): void {
     const propertiesWithDate = this.addDate(inputtedProperties);
     this.commentService.sendCommentProperties(propertiesWithDate);
+    this.form.reset();
+    // add little message box
   }
 
   addDate(properties: CommentProperties): CommentProperties {
@@ -48,7 +50,4 @@ export class CommentFormComponent implements OnInit {
     enrichedProperties.date = new Date().toDateString();
     return enrichedProperties;
   }
-
-
-
 }
